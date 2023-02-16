@@ -21,7 +21,7 @@ export default function Home() {
       if (response.status !== 200) {
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
-alert(data.result);
+
       setResult(data.result);
       setNVCTextInput("");
     } catch(error) {
