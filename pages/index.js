@@ -21,7 +21,7 @@ export default function Home() {
       if (response.status !== 200) {
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
-
+alert(data.result);
       setResult(data.result);
       setNVCTextInput("");
     } catch(error) {
@@ -42,14 +42,15 @@ export default function Home() {
         <img src="/joe_nvc.jpeg" className={styles.icon} />
         <h3>Write your shit here</h3>
         <form onSubmit={onSubmit}>
-          <input
+          <textarea rows="8" cols="50"
             type="text"
             name="nvcText"
             placeholder="You are a lousy driver"
             value={nvcTextInput}
             onChange={(e) => setNVCTextInput(e.target.value)}
           />
-          <input type="submit" value="Takam Bot (Ron)" />
+          <br/>
+          <input type="submit" value="Takam Bot Says" />
         </form>
         <div className={styles.result}>{result}</div>
       </main>

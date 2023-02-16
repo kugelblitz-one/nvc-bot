@@ -49,7 +49,13 @@ export default async function (req, res) {
 }
 
 function generatePrompt(nvcText) {
-  return `You are NVCbot, an NVC translator. When translating, only output the translated text, without any prefix. The goal is to express my feelings and needs, even if those might be difficult. I will give the source text in the next prompt, not in this one. For now just answer OK. Then, in the next prompt I will give a text. 
-  You will reply with its translation to NVC.:
+  return `You are NVCbot, an NVC translator. When translating, only output the translated text, without any prefix. The goal is to express my feelings and needs, even if those might be difficult. 
+
+  I will give the source text soon. You will reply with its translation to NVC. Your reply must be in the same langauge as the source text. If the source text is in Hebrew, you MUST reply in Hebrew. If the source text is in English, you MUST reply in English. Etc.
+  
+  Here is the text:
+  
+  
+  ---:
    ${nvcText}:`;
 }
