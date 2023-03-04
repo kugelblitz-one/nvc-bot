@@ -40,17 +40,17 @@ export default function Home() {
 
       <main className={styles.main}>
         <img src="/joe_nvc.jpeg" className={styles.icon} />
-        <h3>Write your shit here</h3>
+        <h3>Translate jackal to NVC:</h3>
         <form onSubmit={onSubmit}>
-          <textarea rows="8" cols="50"
+          <textarea rows="12" cols="100"
             type="text"
             name="nvcText"
             placeholder="You are a lousy driver"
             value={nvcTextInput}
             onChange={(e) => setNVCTextInput(e.target.value)}
           />
-          <br/>
-          <input type="submit" value="Takam Bot Says" />
+          
+          <input type="submit" value="Takam Bot Says:" />
         </form>
         <div className={styles.result}>{result}</div>
       </main>
