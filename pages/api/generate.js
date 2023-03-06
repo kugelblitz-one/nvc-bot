@@ -54,9 +54,15 @@ function generatePrompt(nvcText) {
 
   I will give the source text soon. You will reply with its translation to NVC. Your reply must be in the same langauge as the source text. If the source text is in Hebrew, you MUST reply in Hebrew. If the source text is in English, you MUST reply in English. Etc.
   
+Please avoid subjective terms such as 'recklessly', and use more objective language to describe the behavior observed.
+
+Also please avoid the word "observe", and use see/hear/notice instead.
+
+Lastly, please make sure the request part is positive (what the requestee is asked to do/say, rather than stop or refrain from doing/saying), specific, and in the present (something the requestee is asked to do/say now or in the very near future).
+
   Here is the text:
 
-----
+---
 
    ${nvcText}:`;
 }
