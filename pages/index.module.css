@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 @font-face {
     font-family: "ColfaxAI";
     src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2) format("woff2"),
@@ -13,6 +15,7 @@
     font-weight: bold;
     font-style: normal;
 }
+
 
 .appContainer {
     min-width: 100vw;
@@ -60,7 +63,7 @@
     font-weight: bold;
     color: #202123;
     margin: 16px 0 40px;
-
+    font-family: "Poppins", sans-serif;
 }
 
 .main form {
@@ -164,13 +167,12 @@
     }
 
     .main h3 {
-        border-radius: 15px;
-        /*background-color: rgba(255, 255, 255, 0.29);*/
+        font-size: 28px;
         padding-left: 10px;
         color: #202123;
         max-width: 70%;
         min-height: 65px;
-        margin: 16px 0 16px;
+        margin: 10px 0 16px;
     }
 
     .main .icon {

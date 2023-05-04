@@ -13,7 +13,7 @@ const demoText = `Contrary to popular belief, Lorem Ipsum is not simply random t
 export default function Home() {
     const [nvcTextInput, setNVCTextInput] = useState("");
     const [result, setResult] = useState();
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
 
     async function onSubmit(event) {
         setIsLoading(true)
@@ -54,9 +54,9 @@ export default function Home() {
 
 
             <main className={styles.main}>
-                <img src="/joe_nvc.jpeg" className={styles.icon}/>
+                <img src="/joe_nvc.jpeg" className={styles.icon} alt={'Jackal'}/>
                 <div className={styles.centercol}>
-                    <h3>Translate jackal to NVC </h3>
+                    <h3>Translate Jackal to NVC </h3>
                     <form onSubmit={onSubmit}>
               <textarea rows="12" cols="100"
                         type="text"
