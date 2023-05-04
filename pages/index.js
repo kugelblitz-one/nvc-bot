@@ -1,10 +1,12 @@
 import Head from "next/head";
 import { useState } from "react";
 import styles from "./index.module.css";
+const demoText  = `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,/n "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.`
+
 
 export default function Home() {
   const [nvcTextInput, setNVCTextInput] = useState("");
-  const [result, setResult] = useState();
+  const [result, setResult] = useState(demoText);
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -55,7 +57,12 @@ export default function Home() {
               
               <input type="submit" value="Takam Bot Says:" />
             </form>
-            <div className={styles.result}> <pre style={{'margin':'0', 'white-space': "pre-wrap", 'width':'100%'}}> {result}</pre></div>
+            <div  className={styles.resultWrapper}>
+                <div className={styles.result}>
+                <pre style={{'margin':'0', 'white-space': "pre-wrap", 'width':'100%'}}>
+                    {result}</pre></div>
+            </div>
+
           </div>
       </main>
     </div>

@@ -107,15 +107,23 @@
     text-align: center;
     cursor: pointer;
 }
-
+.main .resultWrapper {
+   padding-top : 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .main .result {
+    border-radius: 8px;
     font-weight: bold;
-    margin-top: 20px;
     background-color: azure;
     font-size: 16px;
-    width: 534px;
-    padding-top: 10px;
-
+    width: 524px;
+    box-sizing: border-box;
+    padding: 10px 15px 15px;
+    max-width: 90vw;
+    box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
 }
 
 .preClass {
@@ -126,10 +134,11 @@
 @media only screen and (max-width: 700px) {
     .main .result {
         font-weight: bold;
-        margin-top: 40px;
+        margin-top: 5px;
         background-color: azure;
         font-size: 16px;
         padding-top: 10px;
+
 
     }
 
@@ -146,7 +155,7 @@
 
     .main h3 {
         border-radius: 15px;
-        background-color: rgba(255, 255, 255, 0.29);
+        /*background-color: rgba(255, 255, 255, 0.29);*/
         padding-left: 10px;
         color: #202123;
         margin: 16px 0 40px;
@@ -158,5 +167,11 @@
         width: 234px;
         position: fixed;
         right: 0;
+    }
+    .main .resultWrapper {
+        padding-top : 2px;
+    }
+    .main form textarea {
+        max-height: 160px;
     }
 }
