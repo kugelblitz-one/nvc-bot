@@ -18,7 +18,7 @@ export default function Home() {
       });
 
       const data = await response.json();
-      data.result = data.result.replace("\n\n", '');
+         data.result = data.result.replace("\n\n", '');
       if (response.status !== 200) {
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
