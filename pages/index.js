@@ -1,7 +1,7 @@
 import Head from "next/head";
 import {useState} from "react";
 import styles from "./index.module.css";
-import {LoadingSpinner} from "./components/loadingSpinner";
+import LoadingSpinner from "./components/loadingSpinner";
 
 // Chen doesn't have access to the api so I use it as a placeholder
 const demoText = `Contrary to popular belief, Lorem Ipsum is not simply random text.\n
