@@ -12,6 +12,7 @@ const demoText  = `Contrary to popular belief, Lorem Ipsum is not simply random 
 export default function Home() {
   const [nvcTextInput, setNVCTextInput] = useState("");
   const [result, setResult] = useState();
+  const [isLoading, setIsLoading] = useState(false);
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -62,6 +63,8 @@ export default function Home() {
               
               <input type="submit" value="Takam Bot Says:" />
             </form>
+            {isLoading ? <div></div> : null }
+
             <div  className={styles.resultWrapper}>
                 <div className={styles.result}>
                 <pre style={{'margin':'0', 'white-space': "pre-wrap", 'width':'100%'}}>
