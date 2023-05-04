@@ -78,7 +78,7 @@
     box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
     outline: none;
     border-color: rgba(118, 118, 118, 0.52);
-    transition: box-shadow  300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out;
 }
 
 .main form textarea:active, .main form textarea:focus {
@@ -107,13 +107,15 @@
     text-align: center;
     cursor: pointer;
 }
+
 .main .resultWrapper {
-   padding-top : 20px;
+    padding-top: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .main .result {
     border-radius: 8px;
     font-weight: bold;
@@ -124,6 +126,14 @@
     padding: 10px 15px 15px;
     max-width: 90vw;
     box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
+}
+
+.main .spinnerWrapper {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .preClass {
@@ -168,9 +178,11 @@
         position: fixed;
         right: 0;
     }
+
     .main .resultWrapper {
-        padding-top : 2px;
+        padding-top: 2px;
     }
+
     .main form textarea {
         max-height: 160px;
     }

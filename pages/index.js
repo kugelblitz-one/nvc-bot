@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import styles from "./index.module.css";
+import {LoadingSpinner} from "./components/loadingSpinner";
 
 // Chen doesn't have access to the api so I use it as a placeholder
 const demoText  = `Contrary to popular belief, Lorem Ipsum is not simply random text.\n
@@ -12,7 +13,7 @@ const demoText  = `Contrary to popular belief, Lorem Ipsum is not simply random 
 export default function Home() {
   const [nvcTextInput, setNVCTextInput] = useState("");
   const [result, setResult] = useState();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -63,7 +64,7 @@ export default function Home() {
               
               <input type="submit" value="Takam Bot Says:" />
             </form>
-            {isLoading ? <div></div> : null }
+            {isLoading ? <div className={styles.spinnerWrapper}> <LoadingSpinner/> </div> : null }
 
             <div  className={styles.resultWrapper}>
                 <div className={styles.result}>
