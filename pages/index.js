@@ -33,11 +33,12 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className={styles.appContainer }>
       <Head>
         <title>NVC Bot</title>
         <link rel="icon" href="/joe_nvc.jpeg" />
       </Head>
+
 
       <main className={styles.main}>
         <img src="/joe_nvc.jpeg" className={styles.icon} />
