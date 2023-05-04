@@ -18,6 +18,7 @@ export default function Home() {
       });
 
       const data = await response.json();
+      data.result = data.result.replace("\n\n", '');
       if (response.status !== 200) {
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
@@ -53,7 +54,7 @@ export default function Home() {
               
               <input type="submit" value="Takam Bot Says:" />
             </form>
-            <div className={styles.result}>{result}</div>
+            <div className={styles.result}> <pre style={{'margin':'0', 'white-space': "pre-wrap", 'width':'100%'}}> {result}</pre></div>
           </div>
       </main>
     </div>

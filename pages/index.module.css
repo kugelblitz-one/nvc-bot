@@ -79,8 +79,47 @@
 }
 .main .result {
   font-weight: bold;
-  margin-top: 40px;
+  margin-top: 20px;
   background-color: azure;
   font-size: 16px;
   width: 534px;
+  padding-top: 10px;
+
+}
+
+.preClass {
+  white-space: pre-wrap;
+  width: 534px;
+}
+
+@media only screen and (max-width: 700px) {
+  .main .result {
+    font-weight: bold;
+    margin-top: 40px;
+    background-color: azure;
+    font-size: 16px;
+    width: 90%;
+    padding-top: 10px;
+  
+  }
+  
+  .preClass {
+    white-space: pre-wrap;
+    width: 90%;
+  }
+
+  .main form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .main h3 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #202123;
+    margin: 16px 0 40px;
+    max-width: 100%;
+  }
 }
