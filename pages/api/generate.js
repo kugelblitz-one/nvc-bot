@@ -54,7 +54,8 @@ function generatePrompt(nvcText) {
 
 Use this format:
 
--------------
+
+
 
 Observations:
 <Observations>
