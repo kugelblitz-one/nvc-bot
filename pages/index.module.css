@@ -112,6 +112,20 @@
     text-align: center;
     cursor: pointer;
 }
+.main .videoLink {
+    border-radius: 30px;
+    margin : 20px 0 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 12px 0;
+    color: #2610a3;
+    background-color: #fff;
+    border:solid 1px  #8e8ea0 ;
+    text-decoration: none !important;
+    text-align: center;
+    cursor: pointer;
+}
 
 .main .resultWrapper {
     padding-top: 20px;

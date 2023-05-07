@@ -85,6 +85,10 @@ export default function Home() {
                     {result}</pre>
                         </div>
                     </div> : null}
+                    <a href={'https://www.youtube.com/watch?v=V-UIj01jZBE&t=3s'} target="_blank">
+                        <div className={styles.videoLink}><span style={{fontSize: '26px', marginRight: "20px"}}> ▶ </span>   Watch NVC Animation video</div>
+                    </a>
+
 
 
                 </div>
