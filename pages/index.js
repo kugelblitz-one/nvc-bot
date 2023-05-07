@@ -17,7 +17,7 @@ const demoText = `Contrary to popular belief, Lorem Ipsum is not simply random t
 
 export default function Home() {
     const [nvcTextInput, setNVCTextInput] = useState("");
-    const [result, setResult] = useState(demoText);
+    const [result, setResult] = useState();
     const [isLoading, setIsLoading] = useState(false);
     const pressKey = (event) => event.keyCode === 13 ? onSubmit(event) : null
 
@@ -85,9 +85,12 @@ export default function Home() {
                     {result}</pre>
                         </div>
                     </div> : null}
-                    <a href={'https://www.youtube.com/watch?v=V-UIj01jZBE&t=3s'} target="_blank">
-                        <div className={styles.videoLink}><span style={{fontSize: '26px', marginRight: "20px"}}> ▶ </span>   Watch NVC Animation video</div>
-                    </a>
+                    <div className={styles.videoLinkWrapper} >
+                        <a href={'https://www.youtube.com/watch?v=V-UIj01jZBE&t=3s'} target="_blank">
+                            <div className={styles.videoLink}><span style={{fontSize: '26px', marginRight: "20px"}}> ▶ </span>   Watch NVC Animation video</div>
+                        </a>
+                    </div>
+
 
 
 
