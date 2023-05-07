@@ -19,12 +19,13 @@
 
 .appContainer {
     min-width: 100vw;
-    min-height: 100vh;
+    min-height: 115vh;
     background-color: #ececec;
     position: relative;
     top: 0;
     right: 0;
 }
+
 
 .main,
 .main input {
@@ -38,9 +39,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fafafa;
-
-
 }
 
 .main .icon {
@@ -49,10 +47,14 @@
     align-self: start;
     position: static;
 }
-
+.main .iconContainer {
+    background-color: white;
+    width: 100vw;
+}
 
 .main .centercol {
-    position: absolute;
+    position: relative;
+    top: -240px;
     max-width: 97vw;
 }
 
@@ -117,6 +119,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .main .result {
@@ -153,6 +156,10 @@
         padding-top: 10px;
 
 
+    }
+    .main .centercol {
+        position: relative;
+        top:  0px;
     }
 
     .preClass {

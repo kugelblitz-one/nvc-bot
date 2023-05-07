@@ -9,12 +9,18 @@ const demoText = `Contrary to popular belief, Lorem Ipsum is not simply random t
  It has roots in a piece of classical Latin 
  literature from 45 BC, making it over 2000 years old. 
  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
- looked up one of the more obscure Latin words, consectetur, `
+ looked up one of the more obscure Latin words, consectetur, Contrary to popular belief, Lorem Ipsum is not simply random text.\n
+ It has roots in a piece of classical Latin 
+ literature from 45 BC, making it over 2000 years old. 
+ Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
+ looked up one of the more obscure Latin words, consectetur,`
 
 export default function Home() {
     const [nvcTextInput, setNVCTextInput] = useState("");
     const [result, setResult] = useState(demoText);
     const [isLoading, setIsLoading] = useState(false);
+    const pressKey = (event) => event.keyCode === 13 ? onSubmit(event) : null
+
 
     async function onSubmit(event) {
         setIsLoading(true)
@@ -55,7 +61,10 @@ export default function Home() {
 
 
             <main className={styles.main}>
-                <img src="/joe_nvc.jpeg" className={styles.icon} alt={'Jackal'}/>
+                <div className={styles.iconContainer} >
+                    <img src="/joe_nvc.jpeg" className={styles.icon} alt={'Jackal'}/>
+                </div>
+
                 <div className={styles.centercol}>
                     <h3>Translate Jackal to NVC </h3>
                     <form onSubmit={onSubmit}>
@@ -65,12 +74,12 @@ export default function Home() {
                         placeholder="E.g. You are a lousy driver"
                         value={nvcTextInput}
                         onChange={(e) => setNVCTextInput(e.target.value)}
-              />
+                        onKeyDown={(e) => pressKey(e)}/>
 
                         <input type="submit" value="Send to Takam Bot"/>
                     </form>
                     {isLoading ? <div className={styles.spinnerWrapper}><LoadingSpinner/></div> : null}
-                    {!isLoading && result ?   <div className={styles.resultWrapper}>
+                    {!isLoading && result ? <div className={styles.resultWrapper}>
                         <div className={styles.result}>
                 <pre style={{'margin': '0', 'white-space': "pre-wrap", 'width': '100%'}}>
                     {result}</pre>
@@ -81,6 +90,7 @@ export default function Home() {
                 </div>
             </main>
         </div>
+
 
     );
 }
