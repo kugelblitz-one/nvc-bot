@@ -4,17 +4,19 @@ import AppIcons from "../icons/icons";
 
 const Footer = () => (<footer className={styles.footerClass}>
         <div className={styles.linksContainer}>
-            Contact us:
+            <span className={styles.contactUs}>  Contact us:</span>
+
 
             <a className={styles.nameLink} href={'https://www.linkedin.com/in/anatrapoport/'}>
-                <div>
-                    <AppIcons type={'site'}  /> Rapoport
+                <div className={styles.divLink}>
+                    <AppIcons type={'linkedin'}/> <span> Anat Rapoport
+ </span>
                 </div>
 
             </a>
             <a className={styles.nameLink} href={'https://www.ripper234.com/'}>
-                <div>
-                    <AppIcons type={'linkedin'}  />   Ron Gross
+                <div className={styles.divLink}>
+                    <AppIcons type={'site'}/> <span>Ron Gross</span>
                 </div>
             </a>
         </div>

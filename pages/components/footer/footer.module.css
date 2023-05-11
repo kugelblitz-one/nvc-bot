@@ -14,7 +14,7 @@
 .linksContainer {
     font-size: 12px;
     display: flex;
-    gap: 10px;
+    gap: 14px;
     flex-direction: row;
     align-items: center;
 }
@@ -26,10 +26,20 @@
     color: white !important;
 
 }
+.divLink {
+   gap: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
 @media only screen and (max-width: 700px) {
     .linksContainer {
         /*gap: 70px;*/
+    }
+    .contactUs {
+        display: none;
     }
 
 }
