@@ -1,3 +1,24 @@
-footer .footerClass {
+.footerClass {
+    background-color: black;
+    color: white;
+    min-height: 40px;
+    width: 100vw;
+    padding: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
+}
+.linksContainer {
+    font-size: 14px;
+    display: flex;
+    gap: 70px;
+    flex-direction: row;
+    align-items: center;
+}
+.nameLink {
+    min-width: 100px;
+    color: white !important;
+    font-family: "Poppins", sans-serif;
 }

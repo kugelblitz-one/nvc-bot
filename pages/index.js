@@ -3,6 +3,7 @@ import {useState} from "react";
 import styles from "./index.module.css";
 
 import LoadingSpinner from "./components/loadingSpinner";
+import Footer from "./components/footer/footer";
 
 // Chen doesn't have access to the api so I use it as a placeholder
 
@@ -98,6 +99,7 @@ export default function Home() {
 
                 </div>
             </main>
+            <Footer></Footer>
         </div>
 
 
