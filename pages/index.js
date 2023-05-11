@@ -1,6 +1,7 @@
 import Head from "next/head";
 import {useState} from "react";
 import styles from "./index.module.css";
+
 import LoadingSpinner from "./components/loadingSpinner";
 
 // Chen doesn't have access to the api so I use it as a placeholder
@@ -8,12 +9,18 @@ const demoText = `Contrary to popular belief, Lorem Ipsum is not simply random t
  It has roots in a piece of classical Latin 
  literature from 45 BC, making it over 2000 years old. 
  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
- looked up one of the more obscure Latin words, consectetur, `
+ looked up one of the more obscure Latin words, consectetur, Contrary to popular belief, Lorem Ipsum is not simply random text.\n
+ It has roots in a piece of classical Latin 
+ literature from 45 BC, making it over 2000 years old. 
+ Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
+ looked up one of the more obscure Latin words, consectetur,`
 
 export default function Home() {
     const [nvcTextInput, setNVCTextInput] = useState("");
     const [result, setResult] = useState();
     const [isLoading, setIsLoading] = useState(false);
+    const pressKey = (event) => event.keyCode === 13 ? onSubmit(event) : null
+
 
     async function onSubmit(event) {
         setIsLoading(true)
@@ -54,7 +61,10 @@ export default function Home() {
 
 
             <main className={styles.main}>
-                <img src="/joe_nvc.jpeg" className={styles.icon} alt={'Jackal'}/>
+                <div className={styles.iconContainer} >
+                    <img src="/joe_nvc.jpeg" className={styles.icon} alt={'Jackal'}/>
+                </div>
+
                 <div className={styles.centercol}>
                     <h3>Translate Jackal to NVC </h3>
                     <form onSubmit={onSubmit}>
@@ -64,22 +74,30 @@ export default function Home() {
                         placeholder="E.g. You are a lousy driver"
                         value={nvcTextInput}
                         onChange={(e) => setNVCTextInput(e.target.value)}
-              />
+                        onKeyDown={(e) => pressKey(e)}/>
 
                         <input type="submit" value="Send to Takam Bot"/>
                     </form>
                     {isLoading ? <div className={styles.spinnerWrapper}><LoadingSpinner/></div> : null}
-
-                    <div className={styles.resultWrapper}>
+                    {!isLoading && result ? <div className={styles.resultWrapper}>
                         <div className={styles.result}>
                 <pre style={{'margin': '0', 'white-space': "pre-wrap", 'width': '100%'}}>
                     {result}</pre>
                         </div>
+                    </div> : null}
+                    <div className={styles.videoLinkWrapper} >
+                        <a href={'https://www.youtube.com/watch?v=V-UIj01jZBE&t=3s'} target="_blank">
+                            <div className={styles.videoLink}><span style={{fontSize: '26px', marginRight: "20px"}}> ▶ </span>   Watch NVC Animation video</div>
+                        </a>
                     </div>
+
+
+
 
                 </div>
             </main>
         </div>
+
 
     );
 }

@@ -1,0 +1,52 @@
+html {
+    /* To make use of full height of page*/
+    min-height: 100%;
+    margin: 0;
+}
+body {
+    min-height: 100%;
+    margin: 0;
+    background-color: #fafafa;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+
+    background-color: rgba(249, 249, 249, 1);
+    box-shadow: none;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    width: 7px;
+    max-height: 20px;
+    background: rgba(91, 91, 91, 0.6);
+    border: 2px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box;
+
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    width: 12px;
+    max-height: 20px;
+    background: rgba(91, 91, 91, 0.6);
+    border: 2px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box;
+}
+
+

@@ -19,12 +19,13 @@
 
 .appContainer {
     min-width: 100vw;
-    min-height: 100vh;
+    min-height: 115vh;
     background-color: #ececec;
-    position: fixed;
+    position: relative;
     top: 0;
     right: 0;
 }
+
 
 .main,
 .main input {
@@ -38,9 +39,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fafafa;
-
-
 }
 
 .main .icon {
@@ -50,9 +48,14 @@
     position: static;
 }
 
+.main .iconContainer {
+    background-color: white;
+    width: 100vw;
+}
 
 .main .centercol {
-    position: absolute;
+    position: relative;
+    top: -240px;
     max-width: 97vw;
 }
 
@@ -111,12 +114,36 @@
     cursor: pointer;
 }
 
+.main .videoLinkWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.main .videoLink {
+    border-radius: 30px;
+    margin: 20px auto 50px;
+   max-width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 12px 0;
+    color: #2610a3;
+    background-color: #fff;
+    border: solid 1px #8e8ea0;
+    text-decoration: none !important;
+    text-align: center;
+    cursor: pointer;
+}
+
 .main .resultWrapper {
     padding-top: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .main .result {
@@ -153,6 +180,11 @@
         padding-top: 10px;
 
 
+    }
+
+    .main .centercol {
+        position: relative;
+        top: 0px;
     }
 
     .preClass {
