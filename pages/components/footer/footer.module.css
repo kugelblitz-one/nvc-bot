@@ -1,0 +1,45 @@
+.footerClass {
+    background-color: black;
+    color: white;
+    min-height: 40px;
+    width: 100vw;
+    padding: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+
+}
+.linksContainer {
+    font-size: 12px;
+    display: flex;
+    gap: 14px;
+    flex-direction: row;
+    align-items: center;
+}
+.nameLink {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /*min-width: 100px;*/
+    color: white !important;
+
+}
+.divLink {
+   gap: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .linksContainer {
+        /*gap: 70px;*/
+    }
+    .contactUs {
+        display: none;
+    }
+
+}

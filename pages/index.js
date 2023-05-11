@@ -2,16 +2,19 @@ import Head from "next/head";
 import {useState} from "react";
 import styles from "./index.module.css";
 
-import LoadingSpinner from "./components/loadingSpinner";
+import LoadingSpinner from "./components/loadingSpinner/loadingSpinner";
+import Footer from "./components/footer/footer";
 
 // Chen doesn't have access to the api so I use it as a placeholder
+
+
 const demoText = `Contrary to popular belief, Lorem Ipsum is not simply random text.\n
  It has roots in a piece of classical Latin 
  literature from 45 BC, making it over 2000 years old. 
  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
  looked up one of the more obscure Latin words, consectetur, Contrary to popular belief, Lorem Ipsum is not simply random text.\n
  It has roots in a piece of classical Latin 
- literature from 45 BC, making it over 2000 years old. 
+ literature from 45 BC, making it over 2000 years old.  
  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
  looked up one of the more obscure Latin words, consectetur,`
 
@@ -61,7 +64,7 @@ export default function Home() {
 
 
             <main className={styles.main}>
-                <div className={styles.iconContainer} >
+                <div className={styles.iconContainer}>
                     <img src="/joe_nvc.jpeg" className={styles.icon} alt={'Jackal'}/>
                 </div>
 
@@ -85,17 +88,18 @@ export default function Home() {
                     {result}</pre>
                         </div>
                     </div> : null}
-                    <div className={styles.videoLinkWrapper} >
+                    <div className={styles.videoLinkWrapper}>
                         <a href={'https://www.youtube.com/watch?v=V-UIj01jZBE&t=3s'} target="_blank">
-                            <div className={styles.videoLink}><span style={{fontSize: '26px', marginRight: "20px"}}> ▶ </span>   Watch NVC Animation video</div>
+                            <div className={styles.videoLink}><span
+                                style={{fontSize: '26px', marginRight: "20px"}}> ▶ </span> Watch NVC Animation video
+                            </div>
                         </a>
                     </div>
 
 
-
-
                 </div>
             </main>
+            <Footer></Footer>
         </div>
 
 
