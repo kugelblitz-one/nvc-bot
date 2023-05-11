@@ -79,7 +79,7 @@ export default function Home() {
                         onChange={(e) => setNVCTextInput(e.target.value)}
                         onKeyDown={(e) => pressKey(e)}/>
 
-                        <input type="submit" value="Send to Takam Bot"/>
+                        <input type="submit" value="Send to NVC Bot"/>
                     </form>
                     {isLoading ? <div className={styles.spinnerWrapper}><LoadingSpinner/></div> : null}
                     {!isLoading && result ? <div className={styles.resultWrapper}>
