@@ -5,19 +5,21 @@ import styles from "./index.module.css";
 import LoadingSpinner from "./components/loadingSpinner";
 
 // Chen doesn't have access to the api so I use it as a placeholder
+
+
 const demoText = `Contrary to popular belief, Lorem Ipsum is not simply random text.\n
  It has roots in a piece of classical Latin 
  literature from 45 BC, making it over 2000 years old. 
  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
  looked up one of the more obscure Latin words, consectetur, Contrary to popular belief, Lorem Ipsum is not simply random text.\n
  It has roots in a piece of classical Latin 
- literature from 45 BC, making it over 2000 years old. 
+ literature from 45 BC, making it over 2000 years old.  
  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
  looked up one of the more obscure Latin words, consectetur,`
 
 export default function Home() {
     const [nvcTextInput, setNVCTextInput] = useState("");
-    const [result, setResult] = useState();
+    const [result, setResult] = useState(demoText);
     const [isLoading, setIsLoading] = useState(false);
     const pressKey = (event) => event.keyCode === 13 ? onSubmit(event) : null
 
