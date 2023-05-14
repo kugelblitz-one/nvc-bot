@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "vitest"
   },
   "dependencies": {
     "next": "^13.1.1",
@@ -15,5 +16,8 @@
   },
   "engines": {
     "node": ">=14.6.0"
+  },
+  "devDependencies": {
+    "vitest": "^0.31.0"
   }
 }
