@@ -2,7 +2,11 @@ import { expect, test } from "vitest";
 import cleanText from "../utils/cleanText";
 
 
-
+test("! before 'Observations'", () => {
+    const rawText = `! Observations: abc123 \n abc123`
+    const result = cleanText(rawText)
+    expect(result).toBe('Observations: abc123 \n abc123');
+});
 test("cleans text before 'Observations'", () => {
     const rawText = `bla bla bla Observations: abc123 \n abc123`
     const result = cleanText(rawText)
