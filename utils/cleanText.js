@@ -9,7 +9,8 @@ export default function cleanText(text) {
         .replace("\n\n", "")
         .replace("---", "");
 
-    const startCleanupRegex = /(.*?)Observations:/im;
+    const startCleanupRegex = /((.|\n)*?)Observations:/im;
+
     const match = text.match(startCleanupRegex);
     if (match) {
         const allTheTextBeforeObservation = match[1]; // regex group capturing
