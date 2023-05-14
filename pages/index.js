@@ -4,6 +4,7 @@ import styles from "./index.module.css";
 
 import LoadingSpinner from "./components/loadingSpinner/loadingSpinner";
 import Footer from "./components/footer/footer";
+import cleanText from "../utils/cleanText";
 
 // Chen doesn't have access to the api so I use it as a placeholder
 
@@ -24,44 +25,7 @@ export default function Home() {
     const [isLoading, setIsLoading] = useState(false);
     const pressKey = (event) => event.keyCode === 13 ? onSubmit(event) : null
 
-    function cleanText(text) {
-        console.log("cleanText: " + text);
 
-        if (!text) {
-            return text;
-        }
-
-        text = text
-            .replace("\n\n", "")
-            .replace("---", "");
-
-        const startCleanupRegex = /(.*?)Observations:/im;
-        const match = text.match(startCleanupRegex);
-        if (match) {
-            const allTheTextBeforeObservation = match[1]; // regex group capturing
-            console.log(
-                `All the text before observations is "${allTheTextBeforeObservation}"`
-            );
-            text = text.replace(allTheTextBeforeObservation, "");
-        }
-            
-        console.log(`text without the start \n\n`, text);
-        return text;
-        
-        // Clean code for the regex - but currently not working.
-        //
-        // if (data.result) {
-        //     data.result = data.result
-        //     .replace("\n\n", '')
-        //     .replace("---", '');
-            
-        //     const startCleanupRegex = /.*?(Observations:.*)/im;
-        //     const match = data.result.match(startCleanupRegex);
-        //     if (match) {
-        //         data.result = match[1]; // regex group capturing
-        //     }
-        // }
-    }
 
     async function onSubmit(event) {
         setIsLoading(true)
